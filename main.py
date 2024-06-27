@@ -13,16 +13,22 @@ for vacancy in vacancies:
 
 vacancies_id_list = []
 for vacancy_id in vacancies:
-    title = vacancy['id']
+    title = vacancy_id['id']
     vacancies_id_list.append(title)
     
 
 area_list = []
-for vacancy_id in vacancies:
-    title = vacancy['are']
+for area in vacancies:
+    title = area['area']
     area_list.append(title)
 
+
+scedule_list = []
+for scedule in vacancies:
+    title = scedule['scedule']['name']
+    scedule_list.append(title)
     
+          
 
 
 
