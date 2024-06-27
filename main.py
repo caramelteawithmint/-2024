@@ -17,10 +17,12 @@ for vacancy_id in vacancies:
     vacancies_id_list.append(title)
     
 
-vacancies_id_list = []
+area_list = []
 for vacancy_id in vacancies:
-    title = vacancy['id']
-    vacancies_id_list.append(title)
+    title = vacancy['are']
+    area_list.append(title)
+
+    
 
 
 
