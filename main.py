@@ -1,6 +1,6 @@
 import requests
 import re
-from bs4 import BeautifulSoup
+
 
 response = requests.get('https://api.hh.ru/vacancies')
 
@@ -32,6 +32,17 @@ professional_roles_list = []
 for professional_roles in vacancies:
     title = professional_roles['professional_roles']['name']
     professional_roles_list.append(title) 
+
+
+employment_list = []
+for employment in vacancies:
+    title = employment['employment']['name']
+    employment_list.append(title)
+
+experience_list = []
+for experience in vacancies:
+    title = experience['experience']['name']
+    experience_list.append(title) 
 
 
 
