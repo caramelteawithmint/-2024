@@ -27,8 +27,14 @@ scedule_list = []
 for scedule in vacancies:
     title = scedule['scedule']['name']
     scedule_list.append(title)
-    
-          
+
+professional_roles_list = []
+for professional_roles in vacancies:
+    title = professional_roles['professional_roles']['name']
+    professional_roles_list.append(title) 
+
+
+
 
 
 
