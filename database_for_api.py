@@ -1,4 +1,4 @@
-import mysql.connector
+from mysql.connector import connect
 import pymysql
 import pymysql.cursors
 import getpass 
@@ -7,13 +7,14 @@ import getpass
 
 
 try:
-    connection = pymysql.connect(
+    with connect(
         host="localhost",
         user=input("Имя пользователя: "),
         password=getpass("Пароль: "),
         cursorclass=pymysql.cursors.DictCursor
-    )
-    print ("Successfully connected")
+    ) as connection:
+        print ("Successfully connected")
+
 except Exception as ex:    
     print("Connection refused..")
     print(ex)
