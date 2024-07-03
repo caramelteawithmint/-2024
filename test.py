@@ -11,4 +11,4 @@ if response.status_code == 200:
     soup = BeautifulSoup(response.content, 'html.parser')
 
     vacancies = soup.find_all('div', class_='vacancy-serp-item')
-print(soup)
+print(response)
